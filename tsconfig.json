@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@constants/*": ["./constants/*"],
+      "@containers/*": ["./containers/*"],
+      "@actions/*": ["./actions/*"],
+      "@apis/*": ["./apis/*"]
+    },
+    "lib": [
+      "es2015",
+      "es6",
+      "dom",
+      "dom.iterable"
+    ],
+    "jsx": "react",
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
