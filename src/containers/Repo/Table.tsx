@@ -1,8 +1,3 @@
-/**
- * repo 列表
- * @author yoyoyohamapi
- * @ignore created 2018-08-12
- */
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { Table as AntTable, message } from 'antd'

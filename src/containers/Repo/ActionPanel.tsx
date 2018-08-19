@@ -1,8 +1,3 @@
-/**
- * 操作栏位
- * @author 消珥
- * @ignore created 2018-07-18 19:07:25
- */
 import * as React from 'react'
 import { connect, DispatchProp } from 'react-redux'
 import { Row, Col, Select, Input } from 'antd'

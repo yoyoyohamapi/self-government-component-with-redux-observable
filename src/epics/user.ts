@@ -3,7 +3,7 @@
  * @author yoyoyohamapi
  * @ignore created 2018-08-12
  */
-import { Observable, interval, from, merge, of } from 'rxjs'
+import { Observable, interval, from, of } from 'rxjs'
 import {
   map,
   distinctUntilChanged,

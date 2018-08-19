@@ -1,8 +1,3 @@
-/**
- * repo actions
- * @author 消珥
- * @ignore created 2018-08-12
- */
 import { ThunkAction } from 'redux-thunk'
 import { AxiosError } from 'axios'
 import {

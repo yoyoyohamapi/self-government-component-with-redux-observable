@@ -1,8 +1,3 @@
-/**
- * Github Demo
- * @author 消珥
- * @ignore created 2018-08-08 15:50:46
- */
 import { applyMiddleware, createStore } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createEpicMiddleware } from 'redux-observable'

@@ -1,8 +1,3 @@
-/**
- * user action types
- * @author 消珥
- * @ignore created 2018-08-12
- */
 export const SEARCH = 'USRE/SEARCH'
 export const FETCH_START = 'USER/FETCH_START'
 export const FETCH_SUCCESS = 'USER/FETCH_SUCCESS'

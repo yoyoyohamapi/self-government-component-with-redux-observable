@@ -1,8 +1,3 @@
-/**
- * repo action types
- * @author 消珥
- * @ignore created 2018-08-12
- */
 export const FETCH_START = 'REPO/FETCH_START'
 export const FETCH_SUCCESS = 'REPO/FETCH_SUCCESS'
 export const FETCH_ERROR = 'REPO/FETCH_ERROR'

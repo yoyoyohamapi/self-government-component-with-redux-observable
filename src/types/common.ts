@@ -1,10 +1,10 @@
-import { Action } from 'redux'
-
 /**
  * common types
  * @author
  * @ignore created 2018-08-12
  */
+
+import { Action } from 'redux'
 
 export interface IAction extends Action {
   payload: any
