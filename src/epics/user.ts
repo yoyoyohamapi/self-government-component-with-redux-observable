@@ -51,34 +51,33 @@ const pollingEpic: Epic = (action$, state$) => {
     ofType(LISTEN_POLLING_START, SEARCH),
     combineLatest(params$, (action, params) => params),
     switchMap((params: ISearchParam) => {
-      const polling$ = merge(
-        interval(15 * 1000).pipe(
-          takeUntil(stopPolling$),
-          startWith(null),
-          switchMap(() => from(fetch(params)).pipe(
-            map(({data}: ISearchResp) => ({
-              type: FETCH_SUCCESS,
-              payload: {
-                total: data.total_count,
-                list: data.items
-              }
-            })),
-            startWith({
-              type: FETCH_START,
-              payload: {}
-            }),
-            catchError((error: AxiosError) => of({
-              type: FETCH_ERROR,
-              payload: {
-                error: error.response.statusText
-              }
-            }))
-          )),
+      const polling$ = interval(15 * 1000).pipe(
+        takeUntil(stopPolling$),
+        startWith(null),
+        switchMap(() => from(fetch(params)).pipe(
+          map(({data}: ISearchResp) => ({
+            type: FETCH_SUCCESS,
+            payload: {
+              total: data.total_count,
+              list: data.items
+            }
+          })),
           startWith({
-            type: POLLING_START,
+            type: FETCH_START,
             payload: {}
-          })
-      ))
+          }),
+          catchError((error: AxiosError) => of({
+            type: FETCH_ERROR,
+            payload: {
+              error: error.response.statusText
+            }
+          }))
+        )),
+        startWith({
+          type: POLLING_START,
+          payload: {}
+        })
+      )
       return polling$
     })
   )
